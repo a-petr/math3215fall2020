@@ -13134,7 +13134,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In <strong>Statistics</strong>, we want to find a good model for a given target random phenomenon and estimate associated model parameters using acquired random data (a.k.a. samples or measurements) for the purposes of prediction (what is the new data going to be), drawing conclusion (does a drug cure an illness or not). This typically envloves the following:</p>
+<p>In <strong>Statistics</strong>, we want to find a good model for a given target random phenomenon and estimate associated model parameters using acquired random data (a.k.a. samples or measurements) for the purposes of prediction (what is the new data going to be) or drawing conclusion (does a drug cure an illness or not). This typically envloves the following:</p>
 <ol>
 <li>Collect data in a representable manner,</li>
 <li>Organize and summarize data: understand what the main charactersitics of the data are (e.g.  data is mostly concentrated around some value, how much they deviate from the value), </li>
@@ -13158,10 +13158,10 @@ div#notebook {
 <p>Suppose we are ovserving a phenomenon with a certain outcome (an experiment, the flunctuations of the stock market etc). Let $S$ denote the space of all possible outcomes of this phenomenon. One such example is the toss of a coin. Each toss results in an outcome of either H (head) or T (tail) so in this case the outcome space will be $S=\{H, T\}$. Or if we are pulling a card from a deck then the space of all outcomes is the set of all individual cards.</p>
 <p>Often times, we are not interested in a specific outcome but rather if the outcome has certain qualities. In the case of the pulled card we may be intersted if it is spades rather than being a specific card from spades. In other words, we are often intersted in sets (collections) of outcomes. Such sets we conventionally call events in probability theory.</p>
 <ul>
-<li>If we want the outcome to have the quality $A$ and quality $B$ simultaneousely, that will correspond to the event $A\cap B$.</li>
-<li>If we want the outcome to have the quality $A$ and not have the quality $B$, the it corresponds to the event $A\setminus B$.</li>
-<li>If we want the outcome to either have the quality $A$ or $B$ then it corresponds to the event $A\cup B$.</li>
-<li>If we want the outcume to not have the quality $A$ then it corresponds to the event $A^\prime = S\setminus A$.</li>
+<li>If we want the outcome to have quality $A$ and quality $B$ simultaneousely, that will correspond to the event $A\cap B$.</li>
+<li>If we want the outcome to have quality $A$ and not have the quality $B$, the it corresponds to the event $A\setminus B$.</li>
+<li>If we want the outcome to either have quality $A$ or $B$ then it corresponds to the event $A\cup B$.</li>
+<li>If we want the outcume to not have quality $A$ then it corresponds to the event $A^\prime = S\setminus A$.</li>
 </ul>
 <hr>
 <p><strong>Definition:</strong></p>
@@ -13184,10 +13184,10 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>There are many situations where a repeatative phenomenon takes place each time with a different outcome. In this case we say that the outcome is random. Probability of an outcome is a number between 0 and 1 that shows the relative frequency at which the random phenonmenon results in that outcome.</p>
 <p>Similarly, the probability of an event $A$ will represent the proportion of outcomes that terminated in $A$.</p>
-<p>For example, consider the coin toss experiment. If we were to repreat the toss many times there is no inherit reason to expect that the number of say heads should be dominating over the number of tails or vise versa. I have experimented  and recorded the outcome of hundred such experiments shown below (used a quarter).</p>
-<p>By relative frequency of heads after $i$ tosses we understand the number 
+<p>For example, consider the coin toss experiment. If we were to repreat the toss many times there is no inherit reason to expect that the number of heads should be dominating over the number of tails or vise versa. I have experimented  and recorded the outcome of hundred such tosses shown below (used a quarter).</p>
+<p>The relative frequency of heads after $i$ tosses is 
 $$f(H) = \frac{\text{# of heads after i tosses}}{i}.$$</p>
-<p>The outcome was</p>
+<p>The outcomes were</p>
 
 <pre><code>                 [T,T,T,H,H,H,H,T,T,T,H,T,T,T,T,T,H,H,H,T,T,H,H,T,H,
                   H,T,H,T,H,H,T,T,H,T,T,T,H,H,H,H,T,T,H,T,T,T,T,T,T,
@@ -13195,7 +13195,7 @@ $$f(H) = \frac{\text{# of heads after i tosses}}{i}.$$</p>
                   T,T,T,T,T,H,T,H,H,T,T,H,H,H,T,H,T,H,H,H,T,T,T,T,T]
 
 </code></pre>
-<p>The graph below shows the frequency as I increase the number of samples. If I repeated this experiment for long enough the graph would eventually stabilize and become close to $1/2$.</p>
+<p>The graph below shows the frequency as I increase the number of samples. If I repeated this experiment for long enough the graph would eventually stabilize and become closer to $1/2$.</p>
 
 </div>
 </div>
@@ -13260,8 +13260,8 @@ $$f(H) = \frac{\text{# of heads after i tosses}}{i}.$$</p>
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In the next example I ran the experiment of aimlessly throwing a dart at a square board and computed the frequency at which it lands in the target circle. This time, instead of empirically, I did it numerically. In here the square is taken to be $[-2,2]^2$ and the circle to be the one with the center at $0$ and of radius $1/2$. As could have been expected, the frequency of landing into the target circle is equal to the proportion of its area and that proprtion is equal to $\pi/16$. And as we increase the number of samples below, it can be seen that the 
-relative frequency converges to the value that we expect to have.</p>
+<p>In the next example I run the experiment of aimlessly throwing a dart at a square board and compute the frequency at which it lands in the target circle. This time, instead of empirically, I did it numerically. Here the square is taken to be the set $[-2,2]^2$, and the circle to be the one with center at $0$ and radius $1/2$. As could have been expected, the frequency of landing into the target circle is equal to the proportion of its area and that proprtion is equal to $\pi/16$. And as we increase the number of samples below, you can see that the 
+relative frequency converges to the value that we expect to have (try playing with the slider).</p>
 
 </div>
 </div>
@@ -13359,7 +13359,7 @@ relative frequency converges to the value that we expect to have.</p>
 <p>The set of events with the associated probabilities is called a <strong>probability space</strong>. As a proportion, the probability of an event is always a number between 0 and 1. However, there are several additional conditions called axioms of probability (introduced by the famous mathematician Vladimir Kolmogorov) that we additionally impose on probability spaces.</p>
 <hr>
 <p><strong>Definition:</strong></p>
-<p>A probability is a function which corresponds to each event $A$  a number $P(A)$ satisfying the following conditions:</p>
+<p>A probability is a set function (i.e. a function whose inputs are sets) which corresponds to each event $A$  a number $P(A)$ satisfying the following conditions:</p>
 <ol>
 <li>for every event $A$, $P(A)\geq 0$,</li>
 <li>P(S)=1,</li>
@@ -13434,7 +13434,7 @@ $$P(A) = p_{i_1}+\cdots + p_{i_k}.$$<p>The simplest probability space on $n$ ele
 <p>Similarly we can consider equiprobability space on the set of outcomes for two times coin toss experiment. In this case 
 $$S=\{HH, HT, TH, TT\}.$$
 And thus the probability of each outcome is $1/4$.</p>
-<p>More generally we cam consider the problem of $m$ coins tosses with a fair coin. Since it is a fair coin we expect that each combination is equally likely to apear and so we have an equiprobability space on the set of all sequences of length $m$ with each entry being either $T$ or $H$. We will see that in this case each outcome has $1/2^m$ probability. And we can also pose questions like "what is the probability of the event that the number of heads in $m$ consequtive tosses is $k$ for some given $k$?". To be able to address problems like we these we need to use tools from Combinatorics which is a branch of mathematics primarily concerned with counting and arranging.</p>
+<p>More generally we can consider the problem of $m$ coins tosses with a fair coin. Since it is a fair coin we expect that each combination is equally likely to apear and so we have an equiprobability space on the set of all sequences of length $m$ with each entry being either $T$ or $H$. We will see that in this case each outcome has $1/2^m$ probability. And we can also pose questions like "what is the probability of the event that the number of heads in $m$ consequtive tosses is $k$ for some given $k$?". To be able to address problems like these we need to use tools from Combinatorics which is a branch of mathematics primarily concerned with counting and arranging.</p>
 
 </div>
 </div>
@@ -13447,7 +13447,7 @@ And thus the probability of each outcome is $1/4$.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Combinatorial techniques employ elementary observations to make complicated computations for various arrangement problems. The most basic observation is the principle of multiplication.</p>
+<p>Combinatorial techniques employ simpler observations to make complicated computations for various arrangement problems. The most basic observation is the principle of multiplication.</p>
 
 </div>
 </div>
@@ -13456,7 +13456,7 @@ And thus the probability of each outcome is $1/4$.</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><strong>Multiplication principle:</strong></p>
-<p>If an experiment $E_1$ has $n_1$ outcomes and the experiment $E_2$ has $n_2$ outcomes, then the number of combined outcomes with be $n_1n_2$.</p>
+<p>If an experiment $E_1$ has $n_1$ outcomes and the experiment $E_2$ has $n_2$ outcomes, then the number of combined outcomes will be $n_1n_2$.</p>
 <hr>
 
 </div>
@@ -13493,7 +13493,7 @@ And thus the probability of each outcome is $1/4$.</p>
 <p><strong>Theorem:</strong></p>
 <p>The number of permutations of a set with $n$ elements is equal to $n!$ where $n!$ ("n factorial") denotes the product $n(n-1)\cdots 1.$</p>
 <p><strong>Proof:</strong></p>
-<p>We will use an observation similar to the principle of multiplication. The first element of the permutation can be selected in $n$ different ways. After the first element is fized, the second element can be chosen in $n-1$ ways (since we have to exclude the first element) so the first two can be selected in $n(n-1)$ ways. After the first two are fixed, the thrid one can be selected in $n-2$ ways and so on.</p>
+<p>We will use an observation similar to the principle of multiplication. The first element of the permutation can be selected in $n$ different ways. After the first element is fixed, the second element can be chosen in $n-1$ ways (since we have to exclude the first element) so the first two can be selected in $n(n-1)$ ways. After the first two are fixed, the thrid one can be selected in $n-2$ ways and so on.</p>
 <hr>
 <p>Let $P(n,r)$  be the number of permutations of $n$ objects taken $r$ at a time. In other words, we take all possible r different element combinations from a set of size n and look at their permutations. By a smilar argument as above, we can show that 
 $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
@@ -13513,7 +13513,7 @@ $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>A sample with unique elements is also called sample without replacement whereass a sample with repeptitions is called sample with replacement.</p>
+<p>A sample with unique elements is also called <strong>sample without replacement</strong> whereass a sample with repeptitions is called <strong>sample with replacement</strong>.</p>
 <p>We typically use brackets to denote ordered samples and curly brackets to denote samples without order. In that regard $(1,2,3)$ and $(1,3,2)$ are diffferent ordered samples while $\{1,2,3\}$ and $\{1,3,2\}$ are the same as samples without order.</p>
 <p>From the discussion above, the number of all ordered samples of size r sampled without replacement is equal to $P(n,r)$.</p>
 
@@ -13526,7 +13526,7 @@ $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 <p><strong>Theorem:</strong></p>
 <p>The number of all  samples without order of size r sampled without replacement is denoted by $C(n,r)$ or ${n \choose r}$ and is equal to the following number</p>
 $$C(n,r)=\frac{n!}{r!(n-r)!}.$$<p><strong>Proof:</strong></p>
-<p>Notice that each sample without order can be ordered in $r!$ ways aaccording to the Theorem about permutations. Hence, using the multiplication principle, $P(n,r)= C(n,r)r!$ from where we conclude that $C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.$</p>
+<p>Notice that each sample without order can be ordered in $r!$ ways according to the Theorem about permutations. Hence, using the multiplication principle, $P(n,r)= C(n,r)r!$ from where we conclude that $C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.$</p>
 <hr>
 
 </div>
@@ -13543,7 +13543,7 @@ $$C(n,r)=\frac{n!}{r!(n-r)!}.$$<p><strong>Proof:</strong></p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
 <p><strong>Example 1</strong></p>
-<p>Suppose we have $r$ red balls and $n-r$ blue balls. In how many different ways can be arrange the two sets of calls? Below you can see the set of such arrangements for specific values of $n$ and $r$. Each row corresponds to one arrangement.</p>
+<p>Suppose we have $r$ red balls and $n-r$ blue balls. In how many different ways can be arrange the two sets of calls? Below you can see the set of all such arrangements for specific values of $n$ and $r$. Each row corresponds to one arrangement (try playing with the slider).</p>
 
 </div>
 </div>
@@ -13618,7 +13618,7 @@ $$C(n,r)=\frac{n!}{r!(n-r)!}.$$<p><strong>Proof:</strong></p>
   </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let us notice that there is a one-to-one correspodence between an arrangement of red and blue balls, and the set of samples of size $r$ (without order) from the set $\{1,\dots, n$. Indeed, to each arrangement put into correspondence the indexes where a red ball is placed. So the arrangement $(R, B, R)$ will correspond to $\{1,3\}$. Since we know that the number of all such samples is $C(n,r)$ we find the number of all red and blue call arangements to be the same.</p>
+<p>Let us notice that there is a one-to-one correspodence between an arrangement of red and blue balls, and the set of samples of size $r$ (without order) from the set $\{1,\dots, n\}$. Indeed, to each arrangement put into correspondence the indeces where a red ball is placed. So the arrangement $(R, B, R)$ will correspond to $\{1,3\}$. Since we know that the number of all such samples is $C(n,r)$ we find the number of all red and blue ball arangements to be that number as well.</p>
 <hr>
 
 </div>
@@ -13629,7 +13629,7 @@ $$C(n,r)=\frac{n!}{r!(n-r)!}.$$<p><strong>Proof:</strong></p>
 <hr>
 <p><strong>Example 2</strong></p>
 <p>Another place where the number ${n \choose r}$ shows up is the Newton's binome which states that</p>
-$$(a+b)^n=\sum_{r=1}^n {n \choose r}a^rb^{n-r}.$$<p>(Try proving this using combinatorail arguments with arrangements.) For this reason ${n \choose r}$ are also called <strong>binomial coefficients</strong>.</p>
+$$(a+b)^n=\sum_{r=1}^n {n \choose r}a^rb^{n-r}.$$<p>(Try proving this using combinatorial arguments with arrangements.) For this reason ${n \choose r}$ are also called <strong>binomial coefficients</strong>.</p>
 <hr>
 
 </div>
@@ -13637,24 +13637,35 @@ $$(a+b)^n=\sum_{r=1}^n {n \choose r}a^rb^{n-r}.$$<p>(Try proving this using comb
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Similarly, we could consider the problem of arranging $k$ different colored balls. Let $r_1,r_2,\dots, r_k$ be the number of balls of corresponding color and $n=r_1+\cdots+r_k.$. Denote the number of such arrangements by  ${n\choose r_1,\dots,r_k}$. It can be checked that 
+<p>Similarly, we could consider the problem of arranging $k$ different colored balls. Let $r_1,r_2,\dots, r_k$ be the number of balls of corresponding color and let $n=r_1+\cdots+r_k$. Denote the number of such arrangements by  ${n\choose r_1,\dots,r_k}$. It can be checked that 
 the following hold.</p>
 <ol>
 <li>${n\choose r_1,\dots,r_k}=\frac{n!}{n_1!\cdots n_k!}.$</li>
 <li>Just like in the two color case, 
 $$(a_1+\cdots + a_k)^n=\sum_{r_1+\cdots+r_k} {n\choose r_1,\dots,r_k}a^rb^{n-r}a_1^{r_1}\cdots a_k^{r_k}$$
-because of which the ${n\choose r_1,\dots,r_k}$ are also called miltinomial coefficients. </li>
+because of which the ${n\choose r_1,\dots,r_k}$ are also called miltinomial coefficients. Here the summation happens along all different subsets $\{r_1,\dots,r_k\}$ of $\{1,\dots, n\}$ that add up to $n$.</li>
 </ol>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 
+  
+
+  <div class="
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
 </div>
 </div>
-</div>
+
+  </div>
 
 
 
