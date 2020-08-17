@@ -7,9 +7,8 @@ dependencies:
   - python=3.8
   - numpy
   - matplotlib
-  - matplotlib_venn
+  - matplotlib-venn
   - ipywidgets
   - jupyter_latex_envs
   - jupyter_contrib_nbextensions
-  - nbinteract
 
