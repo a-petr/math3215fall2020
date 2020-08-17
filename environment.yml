@@ -1,9 +1,27 @@
 channels:
-    - conda-forge
+  - nordicesmhub
+  - bioconda
+  - conda-forge
+  - defaults
 dependencies:
-    - python
-    - setuptools
-    - matplotlib
-    - matplotlib-venn
-    - numpy
-    - ipywidgets
+  - python
+  - numpy
+  - xarray
+  - cartopy
+  - matplotlib
+  - matplotlib-venn
+  - netcdf4
+  - tqdm
+  - rasterio
+  - pandoc
+  - html5lib
+  - ipython_genutils
+  - ipyvolume
+  - ipywidgets
+  - jupyter_latex_envs
+  - jupyter_contrib_nbextensions
+  - nbconvert
+  - nbformat
+  - nodejs
+  - ipypublish
+
