@@ -1,14 +1,7 @@
 channels:
-  - nordicesmhub
-  - bioconda
-  - conda-forge
-  - defaults
+    - conda-forge
 dependencies:
-  - python=3.8
-  - numpy
-  - matplotlib
-  - matplotlib-venn
-  - ipywidgets
-  - jupyter_latex_envs
-  - jupyter_contrib_nbextensions
-
+    - python
+    - setuptools
+    - matplotlib
+    - matplotlib-venn
