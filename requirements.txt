@@ -1,2 +1,5 @@
+numpy
+ipywidgets
 nbinteract
+matplotlib
 matplotlib-venn
