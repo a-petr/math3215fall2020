@@ -4,13 +4,14 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python
+  - python=3.6
   - numpy
   - xarray
   - cartopy
   - matplotlib
   - matplotlib-venn
   - netcdf4
+  - geopandas
   - tqdm
   - rasterio
   - pandoc
@@ -23,5 +24,6 @@ dependencies:
   - nbconvert
   - nbformat
   - nodejs
+  - scikit-image
   - ipypublish
 
