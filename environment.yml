@@ -5,3 +5,5 @@ dependencies:
     - setuptools
     - matplotlib
     - matplotlib-venn
+    - numpy
+    - ipywidgets
