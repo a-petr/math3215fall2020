@@ -3,4 +3,4 @@ ipywidgets
 nbinteract
 matplotlib
 matplotlib-venn
-scipy.special
+scipy
