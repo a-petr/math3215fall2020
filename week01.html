@@ -13134,14 +13134,13 @@ div#notebook {
 <li>If we want the outcome to either have quality $A$ or $B$ then it corresponds to the event $A\cup B$.</li>
 <li>If we want the outcome to not have quality $A$ then it corresponds to the event $A^\prime = S\setminus A$.</li>
 </ul>
-<hr>
-<p><strong>Definition:</strong></p>
-<ol>
-<li>A set of events $A_1,\dots, A_n$ are called mitually exclusive if $A_i\cap A_j=\emptyset$ for every $i\neq j$.</li>
-<li>A set of events  $A_1,\dots, A_n$ are called exhaustive if $$\displaystyle\bigcup_{i=1}^nA_i=S.$$</li>
-</ol>
-<hr>
+<div class="alert alert-block alert-info">
 
+**Definition:** 
+1. A set of events $A_1,\dots, A_n$ are called mitually exclusive if $A_i\cap A_j=\emptyset$ for every $i\neq j$.
+2. A set of events  $A_1,\dots, A_n$ are called exhaustive if $$\displaystyle\bigcup_{i=1}^nA_i=S.$$
+
+</div>
 </div>
 </div>
 </div>
@@ -13335,7 +13334,7 @@ relative frequency converges to the value that we expect to have (try playing wi
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <hr>
-<p><strong> A (deterministic) way to think of randomness and probability: </strong></p>
+<p><strong>A (deterministic) way to think of randomness and probability: </strong></p>
 <p>Imagine the outcome of the experiment depends on the "state" of the factors that determine the outcome ("state of the universe"). In different states, the outcome will be different. The probability of an outcome is the proportion of those states that produce that outcome.</p>
 <hr>
 
@@ -13345,16 +13344,20 @@ relative frequency converges to the value that we expect to have (try playing wi
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The set of events with the associated probabilities is called a <strong>probability space</strong>. As a proportion, the probability of an event is always a number between 0 and 1. However, there are several additional conditions called axioms of probability (introduced by the famous mathematician Vladimir Kolmogorov) that we additionally impose on probability spaces.</p>
-<hr>
-<p><strong>Definition:</strong></p>
-<p>A probability $P$ is any set function (i.e. a function that takes a  set $A$ as input and outputs a number $P(A)$)  satisfying the following conditions:</p>
-<ol>
-<li>for every event $A$, $P(A)\geq 0$,</li>
-<li>P(S)=1,</li>
-<li>for any  (finite or infinite) collection of mutually exclusive events $\{A_1,A_2,\dots\}$,</li>
-</ol>
-$$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$<hr>
-<p>Note that, the same set of outcomes can have different associated probabilities and thus the resulting probability spaces will be different. For example, if the coin is not fair (because its weight is not evenly distributed or some other reason), then that can affect the probabilities of heads and tails in the coin toss experiment.</p>
+<div class="alert alert-block alert-info">
+
+
+**Definition:** 
+
+A probability $P$ is any set function (i.e. a function that takes a  set $A$ as input and outputs a number $P(A)$)  satisfying the following conditions:
+
+1. for every event $A$, $P(A)\geq 0$,
+2. P(S)=1,
+3. for any  (finite or infinite) collection of mutually exclusive events $\{A_1,A_2,\dots\}$,
+
+$$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$
+
+</div><p>Note that, the same set of outcomes can have different associated probabilities and thus the resulting probability spaces will be different. For example, if the coin is not fair (because its weight is not evenly distributed or some other reason), then that can affect the probabilities of heads and tails in the coin toss experiment.</p>
 
 </div>
 </div>
@@ -13379,36 +13382,37 @@ $$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$<hr>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong>Theorem:</strong></p>
-<ol>
-<li>$P(A^\prime)=1-P(A)$.</li>
-<li>$P(\emptyset)=0$.</li>
-<li>$0\leq P(A)\leq 1$.</li>
-</ol>
-<p><strong>Proof:</strong></p>
+<div class="alert alert-block alert-info">
+
+**Theorem:**
+
+1. $P(A^\prime)=1-P(A)$.
+2. $P(\emptyset)=0$.
+3. $0\leq P(A)\leq 1$.
+
+</div><p><strong>Proof:</strong></p>
 <ol>
 <li>$A$ and $A^\prime$ are mutually exclusive and $A\cup A^\prime=S$ hence $P(A)+P(A^\prime)=P(S)=1$.</li>
 <li>The compliment of the empty set is $S$, hence, from 1., $P(\emptyset)=1-P(S)=0$.</li>
-<li>$P(A)\geq 0$ by definition and $P(A)=1-P(A^\prime)\leq 1$.</li>
+<li>$P(A)\geq 0$ by definition and $P(A)=1-P(A^\prime)\leq 1$. $\blacksquare$</li>
 </ol>
-<hr>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<div class="alert alert-block alert-info">
+
 <p><strong>Theorem:</strong></p>
 <ol>
 <li>If $A\subseteq B$ then $P(A)\leq P(B)$.</li>
-<li>For any $A,B$, $$P(A\cup B)= P(A)+P(B)-P(A\cap B).$$</li>
-</ol>
-<hr>
-<p><strong>Proof:</strong></p>
-<ol>
-<li>If $A\subseteq B$ then $A$ and $B\setminus A$ are mutually exclusive and $A\cup (B\setminus A)=B$ (see the Venn diagram below) hence $P(B)=P(A)+P(B\setminus A)\geq P(A)$.</li>
+<li><p>For any $A,B$, $$P(A\cup B)= P(A)+P(B)-P(A\cap B).$$</p>
+<p>&lt;/div&gt;
+<strong>Proof:</strong></p>
+</li>
+<li><p>If $A\subseteq B$ then $A$ and $B\setminus A$ are mutually exclusive and $A\cup (B\setminus A)=B$ (see the Venn diagram below) hence $P(B)=P(A)+P(B\setminus A)\geq P(A)$.\</p>
+</li>
 </ol>
 
 </div>
@@ -13466,7 +13470,7 @@ $$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$<hr>
 <li>Notice that the following events are mutually exclusive</li>
 </ol>
 $$A_1=A\setminus B,\;\; A_2=B\setminus A, \;\;A_3=A\cap B,$$<p>and     $A\cup B= A_1\cup A_2\cup A_3$ (see the Venn diagram below). Hence</p>
-$$P(A\cup B)=P(A\setminus B)+P(B\setminus A)+P(A\cap B)$$$$=[P(A\setminus B)+P(A\cap B)]+[P(B\setminus A)+P(A\cap B)]-P(A\cap B)$$$$=P(A)+P(B)-P(A\cap B).$$
+$$P(A\cup B)=P(A\setminus B)+P(B\setminus A)+P(A\cap B)$$$$=[P(A\setminus B)+P(A\cap B)]+[P(B\setminus A)+P(A\cap B)]-P(A\cap B)$$$$=P(A)+P(B)-P(A\cap B). \blacksquare$$
 </div>
 </div>
 </div>
@@ -13552,11 +13556,13 @@ And thus the probability of each outcome is $1/4$.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong>Multiplication principle:</strong></p>
-<p>If experiment $E_1$ has $n_1$ outcomes and experiment $E_2$ has $n_2$ outcomes, then the number of joint outcomes will be $n_1n_2$.</p>
-<hr>
+<div class="alert alert-block alert-info">
 
+**Multiplication principle:**
+
+If experiment $E_1$ has $n_1$ outcomes and experiment $E_2$ has $n_2$ outcomes, then the number of joint outcomes will be $n_1n_2$.
+
+</div>
 </div>
 </div>
 </div>
@@ -13576,23 +13582,26 @@ And thus the probability of each outcome is $1/4$.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<div class="alert alert-block alert-info">
+
 <p><strong>Definition:</strong></p>
 <p>A <strong>permutation</strong> of a set is any ordered arrangement of its members.</p>
-<hr>
-<p>For example, the sequences $(1,2,3)$ and $(2,1,3)$ each are permutations of the set $\{1,2,3\}$.</p>
+<p>&lt;/div&gt;
+For example, the sequences $(1,2,3)$ and $(2,1,3)$ each are permutations of the set $\{1,2,3\}$.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong>Theorem:</strong></p>
-<p>The number of permutations of a set with $n$ elements is equal to $n!$ where $n!$ ("n factorial") denotes the product $n(n-1)\cdots 1.$</p>
-<p><strong>Proof:</strong></p>
-<p>We will use an observation similar to the principle of multiplication. The first element of the permutation can be selected in $n$ different ways. After the first element is fixed, the second element can be chosen in $n-1$ ways (since we have to exclude the first element) so the first two can be selected in $n(n-1)$ ways. After the first two are fixed, the third one can be selected in $n-2$ ways, and so on.</p>
-<hr>
+<div class="alert alert-block alert-info">
+
+**Theorem:**
+
+The number of permutations of a set with $n$ elements is equal to $n!$ where $n!$ ("n factorial") denotes the product $n(n-1)\cdots 1.$
+
+</div><p><strong>Proof:</strong></p>
+<p>We will use an observation similar to the principle of multiplication. The first element of the permutation can be selected in $n$ different ways. After the first element is fixed, the second element can be chosen in $n-1$ ways (since we have to exclude the first element) so the first two can be selected in $n(n-1)$ ways. After the first two are fixed, the third one can be selected in $n-2$ ways, and so on. $\blacksquare$</p>
 <p>Let $P(n,r)$  be the number of permutations of $n$ objects taken $r$ at a time. In other words, we take all possible r different element combinations from a set of size n and look at their permutations. By a similar argument as above, we can show that 
 $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 
@@ -13601,11 +13610,13 @@ $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong>Definition:</strong></p>
-<p>A <strong>sample of size $r$</strong> from a given set $S$ is any selection of elements from the set. A sample can be unique or with repetitions (the same element is present more than once), it can also be ordered or without order.</p>
-<hr>
+<div class="alert alert-block alert-info">
 
+**Definition:**
+
+A **sample of size $r$** from a given set $S$ is any selection of elements from the set. A sample can be unique or with repetitions (the same element is present more than once), it can also be ordered or without order. 
+
+</div>
 </div>
 </div>
 </div>
@@ -13620,12 +13631,16 @@ $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
-<p><strong>Theorem:</strong></p>
-<p>The number of all  samples without an order of size r sampled without replacement is denoted by $C(n,r)$ or ${n \choose r}$ and is equal to the following number</p>
-$${n \choose r}=\frac{n!}{r!(n-r)!}.$$<p><strong>Proof:</strong></p>
-<p>Notice that each sample without order can be ordered in $r!$ ways according to the Theorem about permutations. Hence, using the multiplication principle, $P(n,r)= {n \choose r}r!$ from where we conclude that ${n \choose r}=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.$</p>
-<hr>
+<div class="alert alert-block alert-info">
+
+**Theorem:**
+
+The number of all  samples without an order of size r sampled without replacement is denoted by $C(n,r)$ or ${n \choose r}$ and is equal to the following number
+
+$${n \choose r}=\frac{n!}{r!(n-r)!}.$$
+
+</div><p><strong>Proof:</strong></p>
+<p>Notice that each sample without order can be ordered in $r!$ ways according to the Theorem about permutations. Hence, using the multiplication principle, $P(n,r)= {n \choose r}r!$ from where we conclude that ${n \choose r}=\frac{P(n,r)}{r!}=\frac{n!}{r!(n-r)!}.$ $\blacksquare$</p>
 
 </div>
 </div>
@@ -13751,7 +13766,7 @@ the following hold.</p>
 <li>${n\choose r_1,\dots,r_k}=\frac{n!}{n_1!\cdots n_k!}.$</li>
 <li>Just like in the two color case, 
 $$(a_1+\cdots + a_k)^n=\sum_{r_1+\cdots+r_k=n} {n\choose r_1,\dots,r_k}a^rb^{n-r}a_1^{r_1}\cdots a_k^{r_k}$$
-because of which the ${n\choose r_1,\dots,r_k}$ are also called miltinomial coefficients. Here the summation happens along all different subsets $\{r_1,\dots,r_k\}$ of $\{1,\dots, n\}$ that add up to $n$.</li>
+because of which the ${n\choose r_1,\dots,r_k}$ are also called miltinomial coefficients. Here the summation happens along all different subsets $\{r_1,\dots,r_k\}$ of $\{1,\dots, n\}$ that add up to $n$. $\blacksquare$</li>
 </ol>
 
 </div>
