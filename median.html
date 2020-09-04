@@ -13166,7 +13166,7 @@ is attained at the median.
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Proof.</strong></p>
 <p>Let us take the case of only two points $D=\{x_1, x_2\}$. Using the triangle inequality</p>
-$$|x_1-c|+|x_2-c|\geq |x_1-x_2|=x_2-x_1$$<p>Moreover, for any $c\in [x_1,x_2]$,</p>
+$$|x_1-c|+|x_2-c|\geq |x_1-x_2|=x_2-x_1.$$<p>Moreover, for any $c\in [x_1,x_2]$,</p>
 $$|x_1-c|+|x_2-c|=(c-x_1)+(x_2-c)=x_2-x_1.$$<p>So any point in  $[x_1,x_2]$ minimizes $|x_1-c|+|x_2-c|$.</p>
 
 </div>
@@ -13178,7 +13178,7 @@ $$|x_1-c|+|x_2-c|=(c-x_1)+(x_2-c)=x_2-x_1.$$<p>So any point in  $[x_1,x_2]$ mini
 <li><strong>When n is even</strong></li>
 </ul>
 <p>Then rewrite</p>
-$$\sum\limits_{i=1}^{2k}|x_i-c|= \color{blue}{[|x_1-c|+|x_{2k}-c|]}+\color{blue}{[|x_2-c|+|x_{2k-1}-c|]}+\cdots + \color{blue}{[|x_{k}-c|+|x_{k+1}-c|]}$$<p><br>
+$$\sum\limits_{i=1}^{2k}|x_i-c|= \color{blue}{(|x_1-c|+|x_{2k}-c|)}+\color{blue}{(|x_2-c|+|x_{2k-1}-c|)}+\cdots + \color{blue}{(|x_{k}-c|+|x_{k+1}-c|)}$$<p><br>
 <img src = "images/median_even_group.png" width=600></p>
 <p>According to the discussion above the first term is minimal when $c\in [x_1, x_{2k}]$, the second term is minimal when $c\in [x_2, x_{2k-1}]$ and so on. Thus, when $c\in [x_k,x_{k+1}]$ all the terms have their smallest values. In particular, the median is in that interval: $\frac{x_{k}+x_{k+1}}{2}\in [x_k,x_{k+1}]$ so we have that the median the sum takes its minimal value.</p>
 
@@ -13191,7 +13191,7 @@ $$\sum\limits_{i=1}^{2k}|x_i-c|= \color{blue}{[|x_1-c|+|x_{2k}-c|]}+\color{blue}
 <li><strong>When n is odd</strong></li>
 </ul>
 <p>Then rewrite</p>
-$$\sum\limits_{i=1}^{2k}|x_i-c|= \color{blue}{[|x_1-c|+|x_{2k+1}-c|]}+\color{blue}{[|x_2-c|+|x_{2k}-c|]}+\cdots + \color{blue}{[|x_{k}-c|+|x_{k+2}-c|]}+\color{green}{|x_{k+1}-c|}$$<p><br>
+$$\sum\limits_{i=1}^{2k}|x_i-c|= \color{blue}{(|x_1-c|+|x_{2k+1}-c|)}+\color{blue}{(|x_2-c|+|x_{2k}-c|)}+\cdots + \color{blue}{(|x_{k}-c|+|x_{k+2}-c|)}+\color{green}{|x_{k+1}-c|}.$$<p><br>
 <img src = "images/median_odd_group.png" width=600></p>
 <p>Again, according to the discussion above the first term is minimal when $c\in [x_1, x_{2k+1}]$, the second term is minimal when $c\in [x_2, x_{2k}]$ and so on. Fiinally, the last term $|x_{k+1}-c|$ is minimal when $c=x_{k+1}$. Thus, when $c=x_{k+1}$ all the terms have their smallest values since it belongs to all the above intervals. And we concude thay the minimal value of their sum is at the median. $\blacksquare$</p>
 <hr>
