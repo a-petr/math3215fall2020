@@ -13134,11 +13134,13 @@ div#notebook {
 <li>If we want the outcome to either have quality $A$ or $B$ then it corresponds to the event $A\cup B$.</li>
 <li>If we want the outcome to not have quality $A$ then it corresponds to the event $A^\prime = S\setminus A$.</li>
 </ul>
+<p><strong>Definition:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Definition:** 
-1. A set of events $A_1,\dots, A_n$ are called mitually exclusive if $A_i\cap A_j=\emptyset$ for every $i\neq j$.
-2. A set of events  $A_1,\dots, A_n$ are called exhaustive if $$\displaystyle\bigcup_{i=1}^nA_i=S.$$
+1. A set of events $A_1,\dots, A_n$ are called mitually exclusive if $A_i\cap A_j=\emptyset$ for every $i\neq j$.<br>
+2. A set of events  $A_1,\dots, A_n$ are called exhaustive if
+
+    $$\displaystyle\bigcup_{i=1}^nA_i=S.$$
 
 </div>
 </div>
@@ -13344,15 +13346,15 @@ relative frequency converges to the value that we expect to have (try playing wi
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The set of events with the associated probabilities is called a <strong>probability space</strong>. As a proportion, the probability of an event is always a number between 0 and 1. However, there are several additional conditions called axioms of probability (introduced by the famous mathematician Vladimir Kolmogorov) that we additionally impose on probability spaces.</p>
+<p><strong>Definition:</strong></p>
 <div class="alert alert-block alert-info">
 
 
-**Definition:** 
 
 A probability $P$ is any set function (i.e. a function that takes a  set $A$ as input and outputs a number $P(A)$)  satisfying the following conditions:
 
-1. for every event $A$, $P(A)\geq 0$,
-2. P(S)=1,
+1. for every event $A$, $P(A)\geq 0$,<br>
+2. P(S)=1, <br>
 3. for any  (finite or infinite) collection of mutually exclusive events $\{A_1,A_2,\dots\}$,
 
 $$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$
@@ -13382,13 +13384,13 @@ $$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Theorem:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Theorem:**
 
-1. $P(A^\prime)=1-P(A)$.
-2. $P(\emptyset)=0$.
-3. $0\leq P(A)\leq 1$.
+1. $P(A^\prime)=1-P(A)$.<br>
+2. $P(\emptyset)=0$. <br>
+3. $0\leq P(A)\leq 1$. 
 
 </div><p><strong>Proof:</strong></p>
 <ol>
@@ -13402,17 +13404,16 @@ $$P(A_1\cup A_2\cup\cdots )=P(A_1)+P(A_2)+\cdots.$$
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Theorem:</strong></p>
 <div class="alert alert-block alert-info">
 
-<p><strong>Theorem:</strong></p>
+
+1. If $A\subseteq B$ then $P(A)\leq P(B)$.
+2. For any $A,B$, $$P(A\cup B)= P(A)+P(B)-P(A\cap B).$$
+
+</div><p><strong>Proof:</strong></p>
 <ol>
-<li>If $A\subseteq B$ then $P(A)\leq P(B)$.</li>
-<li><p>For any $A,B$, $$P(A\cup B)= P(A)+P(B)-P(A\cap B).$$</p>
-<p>&lt;/div&gt;
-<strong>Proof:</strong></p>
-</li>
-<li><p>If $A\subseteq B$ then $A$ and $B\setminus A$ are mutually exclusive and $A\cup (B\setminus A)=B$ (see the Venn diagram below) hence $P(B)=P(A)+P(B\setminus A)\geq P(A)$.\</p>
-</li>
+<li>If $A\subseteq B$ then $A$ and $B\setminus A$ are mutually exclusive and $A\cup (B\setminus A)=B$ (see the Venn diagram below) hence $P(B)=P(A)+P(B\setminus A)\geq P(A)$.\</li>
 </ol>
 
 </div>
@@ -13556,9 +13557,9 @@ And thus the probability of each outcome is $1/4$.</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Multiplication principle:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Multiplication principle:**
 
 If experiment $E_1$ has $n_1$ outcomes and experiment $E_2$ has $n_2$ outcomes, then the number of joint outcomes will be $n_1n_2$.
 
@@ -13582,21 +13583,22 @@ If experiment $E_1$ has $n_1$ outcomes and experiment $E_2$ has $n_2$ outcomes, 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Definition:</strong></p>
 <div class="alert alert-block alert-info">
 
-<p><strong>Definition:</strong></p>
-<p>A <strong>permutation</strong> of a set is any ordered arrangement of its members.</p>
-<p>&lt;/div&gt;
-For example, the sequences $(1,2,3)$ and $(2,1,3)$ each are permutations of the set $\{1,2,3\}$.</p>
+
+A **permutation** of a set is any ordered arrangement of its members.
+
+</div><p>For example, the sequences $(1,2,3)$ and $(2,1,3)$ each are permutations of the set $\{1,2,3\}$.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Theorem:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Theorem:**
 
 The number of permutations of a set with $n$ elements is equal to $n!$ where $n!$ ("n factorial") denotes the product $n(n-1)\cdots 1.$
 
@@ -13610,9 +13612,9 @@ $$P(n,r)=n(n-1)\cdots (n-r+1)=\frac{n!}{(n-r)!}.$$</p>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Definition:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Definition:**
 
 A **sample of size $r$** from a given set $S$ is any selection of elements from the set. A sample can be unique or with repetitions (the same element is present more than once), it can also be ordered or without order. 
 
@@ -13631,9 +13633,9 @@ A **sample of size $r$** from a given set $S$ is any selection of elements from 
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Theorem:</strong></p>
 <div class="alert alert-block alert-info">
 
-**Theorem:**
 
 The number of all  samples without an order of size r sampled without replacement is denoted by $C(n,r)$ or ${n \choose r}$ and is equal to the following number
 
